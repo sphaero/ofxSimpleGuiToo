@@ -212,7 +212,7 @@ void ofxSimpleGuiComboBox::draw(float x, float y) {
 	//we assume a max of 256 characters.
 	char choiceBuf[256];
 	
-	setPos(x, y);
+	setPosition(x, y);
 	
 	glPushMatrix();
 	glTranslatef(x, y, 0);

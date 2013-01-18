@@ -63,7 +63,7 @@ public:
 		if(resetCue) {
 			cuePoint1 = 0.0;
 			cuePoint2 = 1.0;
-			input->setPosition(0.0);
+			input->setPositionition(0.0);
 			resetCue = false;
 		}
 		if(cue_1) {
@@ -76,10 +76,10 @@ public:
 		}
 		if(!lock) {
 			if(input->getPosition() >= cuePoint2) {
-				input->setPosition(cuePoint1);
+				input->setPositionition(cuePoint1);
 			}
 			else if(input->getPosition() <= cuePoint1) {
-				input->setPosition(cuePoint1);
+				input->setPositionition(cuePoint1);
 			}
 		}
 		enabled = false;
@@ -96,7 +96,7 @@ public:
 			if(barwidth >= width) barwidth = width;
 
 			input->setPaused(true);
-			input->setPosition(ofMap(barwidth, 0.0, (float)width, 0.0, 1.0));
+			input->setPositionition(ofMap(barwidth, 0.0, (float)width, 0.0, 1.0));
 		}
 	}
 
@@ -108,7 +108,7 @@ public:
 		input->setPaused(true);
 		barwidth = x - this->x;
 		input->setPaused(true);
-		input->setPosition(ofMap(barwidth, 0.0, (float)width, 0.0, 1.0));
+		input->setPositionition(ofMap(barwidth, 0.0, (float)width, 0.0, 1.0));
 	}
 
 	//--------------------------------------------------------------------- mouse released
@@ -123,7 +123,7 @@ public:
 
 		enabled = true;
 		//update postion of gui object
-		setPos(x, y);
+		setPosition(x, y);
 
 		glPushMatrix();
 		glTranslatef(x, y, 0);
